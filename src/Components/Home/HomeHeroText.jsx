@@ -7,7 +7,7 @@ const HomeHeroText = () => {
             <div className='lg:text-[9.5vw] text-[12vw] justify-center flex items-center uppercase lg:leading-[8vw] leading-[10vw]'>
                 L'étincelle
             </div>
-            <div className='lg:text-[9.5vw] text-[12vw] justify-center flex items-start uppercase lg:leading-[8vw] leading-[10vw]'>
+            <div className='lg:text-[9.5vw] text-[12vw] justify-center flex items-center uppercase lg:leading-[8vw] leading-[10vw]'>
                 qui
                 <div className='h-[7vw] w-[16vw] rounded-full -mt-3 overflow-hidden '>
                     <Video1 />
@@ -20,5 +20,4 @@ const HomeHeroText = () => {
         </div>
     )
 }
-
 export default HomeHeroText

@@ -59,10 +59,9 @@ const Agence = () => {
   )
 
   return (
-    <div ref={containerRef} className="parent bg-black text-white selection:bg-white selection:text-black">
+    <div ref={containerRef} className="parent bg-red-900 text-white selection:bg-white selection:text-black">
       <div id="page1" className="relative min-h-[260vh]">
-        {/* Pinned Image: placed BEHIND text (z-0), positioned over the 'OIX' area */}
-        <div
+         <div
           ref={imageDivRef}
           className="absolute top-[20vh] left-[27vw] z-0 h-[28vw] w-[19vw] overflow-hidden rounded-2xl md:rounded-3xl pointer-events-none"
         >
@@ -73,18 +72,13 @@ const Agence = () => {
             alt="Team member"
           />
         </div>
-
-        {/* Hero typography container */}
-        <div className="relative z-10 font-[font2] select-none pointer-events-none">
-          {/* pt-[46vh] pushes 'DOUZE' half-way past the fold of a 100vh screen */}
+        <div className="relative z-9 font-[font2] select-none pointer-events-none">
           <div className="pt-[46vh] overflow-hidden">
             <h1 className="text-[20.5vw] font-black uppercase tracking-tight leading-[17.2vw] text-left px-[2vw]">
               Soixan7e <br />
               Douze
             </h1>
           </div>
-
-          {/* Description Section that scrolls in from below */}
           <div className="mt-40 p-6 lg:mt-64 lg:pl-[42%] lg:pr-16 pointer-events-auto">
             <p className="text-xl leading-relaxed lg:text-4xl font-light">
               Notre curiosité nourrit notre créativité. On reste humbles et on dit non aux gros
@@ -96,7 +90,6 @@ const Agence = () => {
           </div>
         </div>
       </div>
-
       <div id="page2" className="h-screen bg-neutral-950" />
     </div>
   )

@@ -1,12 +1,11 @@
-import React, { useRef } from 'react'
+import React, { useContext, useRef } from 'react'
+import { NavbarContext } from '../context/Navcontext.jsx'
 
 const Navbar = () => {
-
+  const { navOpen, setNavOpen } = useContext(NavbarContext)
   const navGreenRef = useRef(null)
-
-
   return (
-    <div className='top-0 w-full items-around flex  justify-between fixed z-10'>
+    <div className='fixed top-0 z-10 flex w-full items-start justify-between'>
       <div className='p-5'>
       <div className='w-30'>
         <svg className='h-full w-full' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 103 44">
@@ -14,20 +13,21 @@ const Navbar = () => {
         </svg>
         </div>
       </div>
-      <div onMouseEnter={()=>{
+      <button type='button' aria-label={navOpen ? 'Close navigation' : 'Open navigation'} aria-expanded={navOpen} onClick={()=>{
+        setNavOpen((isOpen) => !isOpen)
+      }} onMouseEnter={()=>{
         navGreenRef.current.style.height ='100%'
       }} onMouseLeave={()=>{
         navGreenRef.current.style.height ='0%'
-      }}className='h-16 w-[15vw] relative  bg-black '>      
-        <div className=' h-full w-full z-10'>
+      }} className='relative h-12 top-0 w-[16vw] bg-black'>      
         
-        </div>
         <div ref={navGreenRef} className='h-0 w-full transition-all bg-[#D3FD50] absolute top-0'>
-
+          <div className='relative flex flex-col gap-2 items-end p-3'>
+          <div className='w-18 h-0.5 bg-white'></div>
+          <div className='w-11 h-0.5 bg-white'></div>
+        </div> 
         </div>
-      </div>
-
-      
+      </button>
     </div>
   )
 }

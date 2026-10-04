@@ -12,9 +12,11 @@
 
 body{
   background-color: black;
+  overflow-x: hidden;
 }
 body::selection{
   background: #D3FD50;
+  color: white;
 }
 
 .moveX{
@@ -31,4 +33,44 @@ body::selection{
     to{
         transform: translateX(-100%);
     }
+}
+
+@keyframes moveAnimation{
+  from{
+    transform: translateX(0);
+  }
+  to{
+    transform: translateX(-100%);
+  }
+}
+
+.moveX{
+  animation-name: moveAnimation;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+
+}
+
+.movelink{
+  opacity: 0;
+}
+
+
+.link {
+  position: relative;
+}
+.link .movelink {
+  opacity: 0;
+  transform: translateY(-20px); 
+  transition: opacity 0.4s ease, transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.link:hover .movelink {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+video{
+  user-select: none;
 }
