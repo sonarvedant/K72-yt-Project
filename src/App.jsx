@@ -3,7 +3,7 @@ import {Route,Routes} from 'react-router-dom'
 import Home from './pages/Home'
 import Agence from './pages/Agence'
 import Projects from './pages/Projects'
-// import Loader from './pages/loader.jsx'
+import Loader from './pages/loader.jsx'
 import Navbar from './Navigation/Navbar'
 import FullScreenNav from './Navigation/FullScreenNav'
 
@@ -12,7 +12,7 @@ const App = () => {
 
   return (
     <div className='text-white'>
-      {/* <Loader /> */}
+      <Loader />
       <Navbar/>
       <FullScreenNav />
         <Routes>

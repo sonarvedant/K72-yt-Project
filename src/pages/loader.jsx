@@ -2,7 +2,7 @@ import React from 'react'
 import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
 
-const loader = () => {
+const Loader = () => {
   useGSAP(() => {
     const tl = gsap.timeline()
     tl.from(".loaderh3", {
@@ -36,4 +36,4 @@ const loader = () => {
   )
 }
 
-export default loader
+export default Loader
