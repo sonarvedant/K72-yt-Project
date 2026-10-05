@@ -40,11 +40,11 @@ const Stairs = () => {
         <div>
         <div ref={stairParent} className='h-screen w-full  fixed z-10'>
             <div className='h-screen w-full flex'>
-            <div className='stair h-full w-1/5 bg-red-400'></div>
-            <div className='stair h-full w-1/5 bg-red-400'></div>
-            <div className='stair h-full w-1/5 bg-red-400'></div>
-            <div className='stair h-full w-1/5 bg-red-400'></div>
-            <div className='stair h-full w-1/5 bg-red-400'></div>
+            <div className='stair h-full w-1/5 bg-black'></div>
+            <div className='stair h-full w-1/5 bg-black'></div>
+            <div className='stair h-full w-1/5 bg-black'></div>
+            <div className='stair h-full w-1/5 bg-black'></div>
+            <div className='stair h-full w-1/5 bg-black'></div>
             </div>
 
         </div>

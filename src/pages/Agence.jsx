@@ -27,7 +27,6 @@ const Agence = () => {
   const imageDivRef = useRef(null)
   const imageRef = useRef(null)
 
-  // Preload images to prevent blank frames during scroll
   useEffect(() => {
     imageArray.forEach((src) => {
       const img = new Image()
@@ -59,7 +58,7 @@ const Agence = () => {
   )
 
   return (
-    <div ref={containerRef} className="parent bg-red-900 text-white selection:bg-white selection:text-black">
+    <div ref={containerRef} className="parent bg-black text-white selection:bg-white selection:text-black">
       <div id="page1" className="relative min-h-[260vh]">
          <div
           ref={imageDivRef}
@@ -90,7 +89,6 @@ const Agence = () => {
           </div>
         </div>
       </div>
-      <div id="page2" className="h-screen bg-neutral-950" />
     </div>
   )
 }
