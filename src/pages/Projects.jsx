@@ -20,10 +20,6 @@ const Projects = () => {
           {projects.map(function(project, index){
             return <Projectcard key={index} image1={project.image1} image2={project.image2}/>
           })}
-            
-            
-            
-           
         </div>
       </div>
       </div>
